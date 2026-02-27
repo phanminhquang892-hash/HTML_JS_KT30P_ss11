@@ -6,23 +6,23 @@ let students = [
   { id: 5, name: "Hoàng Văn E", score: 3.8, gender: "Nam" }
 ];
 
-const getStudents = (list) =>
-  list.filter(student => student.score >= 8);
-
+const getStudents = (list) =>{
+  return list.filter(student => student.score >= 8);
+}
 const excellentStudents = getStudents(students);
 console.log("Danh sách sinh viên xuất sắc:");
 console.log(excellentStudents);
 
-const checkStudents = (list) =>
-  list.some(student => student.score < 4)
+const checkStudents = (list) =>{
+ return list.some(student => student.score < 4)
     ? "Có sinh viên yếu": "Không có sinh viên yếu";
-
+}
 console.log("Kiểm tra sinh viên yếu:");
 console.log(checkStudents(students));
 
-const createStudents = (list) =>
-  list.map(student => `Tên: ${student.name} - Điểm: ${student.score}`);
-
+const createStudents = (list) => {
+  return list.map(student => `Tên: ${student.name} - Điểm: ${student.score}`);
+}
 const studentLabels = createStudents(students);
 console.log("Danh sách hiển thị chuẩn hóa:");
 console.log(studentLabels);
